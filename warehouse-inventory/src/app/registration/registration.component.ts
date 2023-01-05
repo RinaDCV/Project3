@@ -9,10 +9,9 @@ import { timer } from 'rxjs';
 })
 export class RegistrationComponent implements OnInit {
 // Get the current date and time as a date-time value.
+dateTime:Date= new Date;
 
-  dateTime:Date = new Date; 
-
-  // create a  date object
+  // create a date object
   ngOnInit(): void{
     timer(0, 1000).subscribe(() => {
       this.dateTime = new Date()
