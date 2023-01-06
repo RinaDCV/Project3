@@ -1,0 +1,15 @@
+div {
+        background-color: lightseagreen;
+        font-family: 'Times New Roman', Times, serif;
+        justify-content: center;
+        text-align: center;
+        font-style: bold;
+        color: white;
+        font-size: x-large;
+        margin: 48px;
+        display: inline-block;
+}
+
+main {
+    display: grid;
+}
