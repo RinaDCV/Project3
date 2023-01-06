@@ -5,13 +5,14 @@ import { RegistrationComponent } from './registration/registration.component';
 import { Warehouse1Component } from './warehouse1/warehouse1.component';
 
 const routes: Routes = [
-  {
-    path: 'login',
-    component: LoginComponent
-  },
+
   {
     path: '',
     component: RegistrationComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: 'warehouse1',
