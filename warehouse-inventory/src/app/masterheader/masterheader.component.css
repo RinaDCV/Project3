@@ -1,0 +1,10 @@
+.title {
+    background-color: lightseagreen;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    font-style: bold;
+    color: white;
+    font-size: x-large;
+
+}
