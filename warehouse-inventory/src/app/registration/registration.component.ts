@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { timer } from 'rxjs';
 import { FormBuilder, Validators } from '@angular/forms';
 
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-registration',
@@ -12,7 +13,8 @@ export class RegistrationComponent implements OnInit {
 // Get the current date and time as a date-time value.
 dateTime:Date= new Date;
 
-constructor(private formBuilderForRegistration: FormBuilder){}
+
+constructor(private formBuilderForRegistration: FormBuilder, private userService:UserService){}
 
 registrationForm = this.formBuilderForRegistration.group(
   {
@@ -63,6 +65,7 @@ formTest: any = {
 
  onSubmit(): void {
     this.formTest = this.registrationForm.value;
+    this.userService.updateUser(this.registrationForm.value);
 
   }
 
@@ -72,6 +75,8 @@ formTest: any = {
     //checking to see if passwords match
     this.passwordsMatch =
       (this.password!.value === this.confirmPassword!.value);
+      this.userService.updateUser(this.registrationForm.value);
+
   }
 
   // create a date object

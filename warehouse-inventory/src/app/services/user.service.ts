@@ -6,6 +6,9 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
+  registerUser(arg0: any) {
+    throw new Error('Method not implemented.');
+  }
 
   constructor() { }
 
@@ -21,6 +24,10 @@ export class UserService {
 
   getUserSubject(): any{
     return this.userSubject.asObservable();
+  }
+  updateUser(newUserInfo: any): void {
+    this.userSubject.next(newUserInfo);
+
   }
 }
 
