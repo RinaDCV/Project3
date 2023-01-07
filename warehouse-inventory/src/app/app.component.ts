@@ -17,6 +17,6 @@ export class AppComponent {
         this.defaultUser = true;
       else
         this.defaultUser = false;
-    })
+    });
   };
 }

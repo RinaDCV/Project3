@@ -1,8 +1,8 @@
 <main>
 <div>
     <!-- using date pipeline to use only the part of time and date we want -->
-    <h1> {{ dateTime | date:'h:mm a'}} </h1>
-    <h2> {{ dateTime | date:'dd MMMM y' }} </h2>
+    <!-- <h1> {{ dateTime | date:'h:mm a'}} </h1>
+    <h2> {{ dateTime | date:'dd MMMM y' }} </h2> -->
   </div>
 <h3>Create Account</h3>
 
@@ -11,12 +11,6 @@
       <input type="text"
              class="formField"
              name="firstName"
-
-
-
-
-
-
              id="firstName"
              placeholder="Enter First Name..." >
              <p class="invalid" *ngIf="firstName!.invalid &&
@@ -77,14 +71,11 @@
                  (change)="checkPasswords()">
           <p class="invalid" *ngIf="(confirmPassword!.invalid || !passwordsMatch) &&
                                     (confirmPassword!.touched || confirmPassword!.dirty)">
-              <!-- <span *ngIf="confirmPassword!.errors?.['required']">Password confirmation is required!</span>
-              <span *ngIf="confirmPassword!.errors?.['minlength']
-                        || confirmPassword!.errors?.['maxlength']">Password confirmation must be exactly 8 characters!</span> -->
+
               <span *ngIf="!passwordsMatch">Passwords must match!</span>
           </p>
 
-          <button type="submit" (click)="onSubmit()" [disabled]="!registrationForm.invalid" class="submitButton">REGISTER</button>
-          <button type="submit" (click)="onSubmit()" class="submitButton">Login</button>
+          <button type="submit" (click)="onSubmit()" [disabled]="registrationForm.invalid || !passwordsMatch" class="submitButton">REGISTER</button>
 
 </form>
 
