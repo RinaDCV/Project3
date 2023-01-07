@@ -11,6 +11,8 @@ import { MasterheaderComponent } from './masterheader/masterheader.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { FooterComponent } from './footer/footer.component';
+import { AssociateComponent } from './associate/associate.component';
+import { ManagerComponent } from './manager/manager.component';
 
 
 @NgModule({
@@ -21,7 +23,10 @@ import { FooterComponent } from './footer/footer.component';
     MasterheaderComponent,
     RegistrationComponent,
     NavigationComponent,
-    FooterComponent
+    FooterComponent,
+    AssociateComponent,
+    ManagerComponent
+
   ],
   imports: [
     BrowserModule,

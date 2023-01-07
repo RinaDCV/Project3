@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { timer } from 'rxjs';
 import { UserService } from './services/user.service';
 
 @Component({
@@ -6,8 +7,9 @@ import { UserService } from './services/user.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent  implements OnInit{
   title = 'warehouse-inventory';
+  dateTime:Date= new Date;
 
   defaultUser: boolean = true;
 
@@ -19,4 +21,13 @@ export class AppComponent {
         this.defaultUser = false;
     });
   };
+  // create a date object
+  ngOnInit(): void{
+    timer(0, 1000).subscribe(() => {
+      this.dateTime = new Date()
+    })
+
+  }
+
+
 }
