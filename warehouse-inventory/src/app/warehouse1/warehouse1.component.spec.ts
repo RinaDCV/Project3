@@ -17,18 +17,23 @@ describe('Warehouse1Component', () => {
     .compileComponents();
   });
 
+  // might not need
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+
     it('should create the app', () => {
       const fixture = TestBed.createComponent(Warehouse1Component);
       const app = fixture.componentInstance;
       expect(app).toBeTruthy();
     });
-  
+
     it(`should have as title 'warehouse-inventory'`, () => {
       const fixture = TestBed.createComponent(Warehouse1Component);
       const app = fixture.componentInstance;
       expect(app.title).toEqual('warehouse-inventory');
     });
-  
+
     it('should render title', () => {
       const fixture = TestBed.createComponent(Warehouse1Component);
       fixture.detectChanges();

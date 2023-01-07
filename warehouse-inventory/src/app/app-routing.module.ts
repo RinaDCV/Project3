@@ -8,7 +8,11 @@ const routes: Routes = [
 
   {
     path: '',
-    component: RegistrationComponent
+    component: LoginComponent
+  },
+  {
+  path: 'register',
+  component: RegistrationComponent
   },
   {
     path: 'login',
@@ -17,7 +21,8 @@ const routes: Routes = [
   {
     path: 'warehouse1',
     component: Warehouse1Component
-  }
+  },
+
 ];
 
 @NgModule({
