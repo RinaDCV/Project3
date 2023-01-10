@@ -1,1 +1,87 @@
-<p>associate works!</p>
+<main>
+
+    <h3>Associate Product Search Menu</h3>
+
+    <form class="registrationForm">
+          <label for="firstName" Class="formLabel">Part Number</label>
+          <input type="text"
+                 class="formField"
+                 name="firstName"
+                 id="firstName"
+                 placeholder="Enter Part Number here" >
+                 <!-- <p class="invalid" *ngIf="firstName!.invalid &&
+                                          (firstName!.touched || firstName!.dirty)">
+                  <span *ngIf="firstName!.errors?.['required']">First Name is required!</span>
+                  <span *ngIf="firstName!.errors?.['minlength']
+                            || firstName!.errors?.['maxlength']">First Name must be 3-20 characters!</span>
+              </p> -->
+
+              <label for="lastName" class="formLabel">Nomenclature</label>
+              <input type="text"
+                     formControlName="lastName"
+                     class="formField"
+                     name="lastName"
+                     id="lastName"
+                     placeholder="Enter Product Nomenclature">
+              <!-- <p class="invalid" *ngIf="lastName!.invalid &&
+                                       (lastName!.touched || lastName!.dirty)">
+                  <span *ngIf="lastName!.errors?.['required']">Last Name is required!</span>
+                  <span *ngIf="lastName!.errors?.['minlength']
+                            || lastName!.errors?.['maxlength']">Last Name must be 3-20 characters!</span>
+              </p> -->
+
+              <label for="email" class="formLabel">Location</label>
+              <input type="text"
+                     formControlName="email"
+                     class="formField"
+                     name="email"
+                     id="e-mail"
+                     placeholder="Enter Product Location">
+              <!-- <p class="invalid" *ngIf="email!.invalid && (email!.touched || email!.dirty)">
+                  <span *ngIf="email!.errors?.['required']">E-Mail is required!</span>
+                  <span *ngIf="email!.errors?.['email']">Must be a valid e-mail address!</span>
+              </p> -->
+
+              <label for="password" class="formLabel">Serial Number</label>
+              <input type="password"
+                     formControlName="password"
+                     class="formField"
+                     name="password"
+                     id="password"
+                     placeholder="Enter Product Serial Number.">
+                     <!-- (change)="checkPasswords()"
+                     class="invalid" *ngIf="password!.invalid &&
+                                       (password!.touched || password!.dirty)">
+                  <span *ngIf="password!.errors?.['required']">Password is required!</span>
+                  <span *ngIf="password!.errors?.['minlength']
+                            || password!.errors?.['maxlength']">Password must be exactly 8 characters!</span>
+              </p> -->
+
+              <label for="confirmPassword" class="formLabel">Order Number</label>
+              <input type="password"
+                     formControlName="confirmPassword"
+                     class="formField"
+                     name="confirmPassword"
+                     id="confirmPassword"
+                     placeholder="Enter Order Number">
+                      <!--(change)="checkPasswords()"
+                      <p class="invalid" *ngIf="(confirmPassword!.invalid || !passwordsMatch) &&
+                                        (confirmPassword!.touched || confirmPassword!.dirty)">
+
+                  <span *ngIf="!passwordsMatch">Passwords must match!</span>
+              </p> -->
+              <label for="email" class="formLabel">Date Ordered</label>
+              <input type="text"
+                     formControlName="email"
+                     class="formField"
+                     name="email"
+                     id="email"
+                     placeholder="Order date">
+
+              <button type="submit" class="submitButton">SEARCH</button>
+
+    </form>
+
+
+
+    </main>
