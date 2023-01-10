@@ -12,8 +12,8 @@ export class UserService {
 
   // an array of pre-existing users we can add to as people register
   users: User[] = [
-    new User('Associate', 'View', 'AS@gmail.com', '12345678'),
-    new User('Manager', 'View', 'MG@gmail.com', '87654321'),
+    new User('Associate', 'View', 'AS@gmail.com', '12345678')
+
 
   ]
 
@@ -26,7 +26,8 @@ export class UserService {
   // we can watch and respond to
   user = this.currentUser.asObservable();
 
-  // this accomplishes the same goal
+
+    // this accomplishes the same goal
   // getUserSubject(): any {
   //   return this.currentUser.asObservable();
   // }

@@ -3,6 +3,6 @@
   <a *ngIf="!userFirstName" class="navLink" routerLink="login">LOGIN</a>
   <a *ngIf="!userFirstName" class="navLink" routerLink="warehouse1">WAREHOUSE1</a>
 
-
+  <a *ngIf="userFirstName" class="navLink" (click)="logout()" routerLink="login">LOGOUT</a>
 
 </nav>
