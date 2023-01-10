@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { timer } from 'rxjs';
 import { UserService } from './services/user.service';
+import { ManagerService } from './services/manager.service';
 
 @Component({
   selector: 'app-root',
@@ -13,8 +14,14 @@ export class AppComponent  implements OnInit{
 
   defaultUser: boolean = true;
 
-  constructor(private userService: UserService) {
+  constructor(private userService: UserService, private managerService: ManagerService) {
     this.userService.user.subscribe(data => {
+      if (data.firstName === 'Default')
+        this.defaultUser = true;
+      else
+        this.defaultUser = false;
+    });
+    this.managerService.user.subscribe(data => {
       if (data.firstName === 'Default')
         this.defaultUser = true;
       else

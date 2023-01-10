@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
+import { ManagerService } from '../services/manager.service';
 
 @Component({
   selector: 'app-login',
@@ -9,21 +10,25 @@ import { UserService } from '../services/user.service';
 })
 export class LoginComponent {
 
-  constructor(private userService: UserService, private router: Router) {}
+  constructor(private userService: UserService, private managerService: ManagerService, private router: Router) {}
   email: string = '';
   password: string = '';
 
 
 // function to log the user in if they're in the array of users
-login(): void {
+managerLogin(): void {
   const users = this.userService.users;
+  const managers = this.managerService.users;
+  for (let manager of managers) {
+    //this first if statement is if a user passes email and password challenge.
+    if (manager.email === this.email && manager.password === this.password)
+      this.managerService.loginManager(manager);
+      this.router.navigate(['../manager']);
 
-  for (let user of users) {
-    if (user.email === this.email && user.password === this.password)
-      this.userService.loginUser(user);
-
+      if(manager.email !== this.email || manager.password !== this.password)
+      this.router.navigate(['../register']);
   }
-  this.router.navigate(['../associate']);
+
   // associateMatch: boolean = false;
 
   // // a function to check if the passwords match
@@ -31,8 +36,19 @@ login(): void {
   //   // if the passwords match, passwordsMatch becomes true
   //   // otherwise, it becomes false
   //  if ( this.AssociateMatch = this.email.valueOf);
+  }
+  login(): void {
+    const users = this.userService.users;
 
-  // }
+    for (let user of users) {
+      //this first if statement is if a user passes email and password challenge.
+      if (user.email === this.email && user.password === this.password)
+        this.userService.loginUser(user);
+        this.router.navigate(['../associate']);
+
+        if (user.email !== this.email || user.password !== this.password)
+        this.router.navigate(['../register']);
+    }
 
 
 }
@@ -41,11 +57,7 @@ devLogin() {
   this.router.navigate(['../warehouse1']);
 }
 
-
 }
-
-
-
 
 function checkEmail() {
   throw new Error('Function not implemented.');
