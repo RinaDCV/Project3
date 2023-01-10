@@ -1,8 +1,14 @@
 <div class="siteheader" role="banner">
-    <i class="material-symbols-outlined">
-    </i>
+    <i class="material-symbols-outlined"></i>
       <span class="title" >WELCOME TO PRO BUILDER</span>
-        <div class="spacer"></div>
-       
-    </div>
 
+
+        <div class="spacer"></div>
+
+    <!-- <img src="white jet on taxiway"> -->
+  </div>
+<app-navigation></app-navigation>
+
+<aside>
+  <p *ngIf="userFirstName" class="asideText">Hello,<br>{{ userFirstName }}!</p>
+</aside>
