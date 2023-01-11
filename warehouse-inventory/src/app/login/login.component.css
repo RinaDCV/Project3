@@ -1,15 +1,24 @@
-div {
-        background-color: lightseagreen;
+main {
+        background-color:black;
         font-family: 'Times New Roman', Times, serif;
         justify-content: center;
         text-align: center;
         font-style: bold;
         color: white;
-        font-size: x-large;
-        margin: 48px;
-        display: inline-block;
+        font-size: large;
+        margin: 370px;
+        margin-left: 35%;
+        margin-right: 35%;
+        padding: 24px;
+        display: flex;
+
 }
 
-main {
-    display: grid;
+label {
+    display: block;
+}
+
+button {
+    background-color: rgb(149, 8, 8);
+    color: white;
 }

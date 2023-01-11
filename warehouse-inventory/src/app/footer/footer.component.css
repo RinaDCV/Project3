@@ -1,8 +1,7 @@
 #footer {
     padding: 28px;
-    bottom: 0px;
-    position: static;
-    background-color: lightseagreen;
+    position:relative;
+    background-color: black;
   }
   
   .social {
@@ -21,7 +20,7 @@
   }
   
   .social a:hover {
-    color: lightpink
+    color: darkgray;
   }
   
   .copyright {

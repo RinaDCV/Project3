@@ -1,0 +1,24 @@
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    text-align: center;
+    margin-top: 0px;
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.image {
+    height: 100em; 
+    background-size: cover; 
+    width: auto;
+    background-image: url('../assets/images/LearJet.jpg');
+}
+
+.space {
+    background-image: url('../assets/images/LearJet.jpg');
+}
