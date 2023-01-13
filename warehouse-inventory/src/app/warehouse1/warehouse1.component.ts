@@ -14,6 +14,8 @@ export class Warehouse1Component {
     email: string = '';
   password: string = '';
 
+  isMenuVisible = false;
+
   login(): void {
     const users = this.userService.users;
 
@@ -28,5 +30,9 @@ export class Warehouse1Component {
   devLogin() {
     this.userService.loginUser(this.userService.users[0]);
     this.router.navigate(['../warehouse1']);
+  }
+
+  toggleMenu(){
+    this.isMenuVisible =!this.isMenuVisible;
   }
 }
