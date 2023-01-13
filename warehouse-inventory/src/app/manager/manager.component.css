@@ -1,9 +1,17 @@
-h2 {
-    text-align: center;
-  }
+h3 {
+  text-align: center;
+  justify-content: center;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(39, 38, 38);
+  color: white;
+  margin-left: 35%;
+  margin-right: 35%;
+}
 
   .registrationForm {
-    background-color: rgb(123, 201, 184);
+    background-color: black;
     border: solid 1px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     padding: 24px;
@@ -38,4 +46,7 @@ h2 {
     font-weight: bold;
     padding: .5em 2em;
     margin: 0px auto;
+    background-color: rgb(149, 8, 8);
+    color: white;
   }
+

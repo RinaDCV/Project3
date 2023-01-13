@@ -10,7 +10,7 @@ main {
         margin-left: 35%;
         margin-right: 35%;
         padding: 24px;
-        display: flex;
+
 
 }
 
@@ -19,6 +19,8 @@ label {
 }
 
 button {
-    background-color: rgb(149, 8, 8);
+    background-color: royalblue;
     color: white;
+    display: block;
+    margin: 0px auto;
 }
