@@ -4,11 +4,11 @@
 }
 body{
     margin: 0px;
-    background-color: rgb(248, 207, 248);
+    background-color:rgb(39, 38, 38);
+
 
 }
 
 main{
-    padding:24px;
     display: flex;
 }
