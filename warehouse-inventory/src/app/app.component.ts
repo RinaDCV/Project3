@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { timer } from 'rxjs';
 import { UserService } from './services/user.service';
 import { ManagerService } from './services/manager.service';
+import { Warehouse1Component } from './warehouse1/warehouse1.component';
+
 
 @Component({
   selector: 'app-root',

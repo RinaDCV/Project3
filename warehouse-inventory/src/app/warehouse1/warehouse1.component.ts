@@ -8,11 +8,14 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./warehouse1.component.css']
 })
 export class Warehouse1Component {
+  checked: any;
 
   constructor(private userService: UserService, private router: Router) {}
   title = 'warehouse-inventory';
     email: string = '';
   password: string = '';
+
+  isMenuVisible = false;
 
   login(): void {
     const users = this.userService.users;
@@ -29,4 +32,9 @@ export class Warehouse1Component {
     this.userService.loginUser(this.userService.users[0]);
     this.router.navigate(['../warehouse1']);
   }
+
+  toggleMenu(){
+    this.isMenuVisible =!this.isMenuVisible;
+  }
+
 }
