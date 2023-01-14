@@ -8,6 +8,7 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./warehouse1.component.css']
 })
 export class Warehouse1Component {
+  checked: any;
 
   constructor(private userService: UserService, private router: Router) {}
   title = 'warehouse-inventory';
@@ -35,4 +36,5 @@ export class Warehouse1Component {
   toggleMenu(){
     this.isMenuVisible =!this.isMenuVisible;
   }
+
 }
