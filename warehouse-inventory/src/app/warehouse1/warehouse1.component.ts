@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
 import { HttphandlerService } from '../services/httphandler.service';
+import { Environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-warehouse1',
@@ -10,7 +11,7 @@ import { HttphandlerService } from '../services/httphandler.service';
 })
 export class Warehouse1Component {
   checked: any;
-  tabledata: any =[]];
+  tabledata: any =[];
 
 
   constructor(private userService: UserService, private router: Router, private HttpHandlerService: HttphandlerService) {}
