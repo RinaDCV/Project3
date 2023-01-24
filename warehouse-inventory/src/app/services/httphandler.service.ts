@@ -8,13 +8,13 @@ import {environment} from 'src/environments/environment';
 })
 export class HttphandlerService {
 
-  
+
   url: string = environment.apiURL;
   tabledata: any = {};
-  
+
 
   constructor(private HttpClient: HttpClient) {
- 
+
 
    }
 
