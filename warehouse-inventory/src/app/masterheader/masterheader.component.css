@@ -5,6 +5,10 @@
     justify-content: center;
     font-style: bold;
     color: white;
-    font-size: x-large;
 
+
+}
+
+h2{
+  font-size: x-large;
 }
