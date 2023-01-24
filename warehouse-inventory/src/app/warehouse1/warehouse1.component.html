@@ -84,7 +84,7 @@ $(document).ready(function(){
 				<div class="table-title">
 					<div class="row">
 						<div class="col-xs-6">
-							<h2>Inventory</h2>
+							<h2>Inventory </h2>
 						</div>
 						<div class="col-xs-6">
 							<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New part/Item</span></a>
@@ -117,12 +117,14 @@ $(document).ready(function(){
 									<label for="checkbox1"></label>
 								</span>
 							</td>
-							<td> 1 </td>
-							<td>P001</td>
-							<td>1</td>
-							<td>Piston Engine</td>
-              <td>3000</td>
-              <td> 1 </td>
+							<ng-container *ngFor="let tabledata of tabledata">
+							<td>{{tabledata.variableName}}</td>
+							<td>{{tabledata.variableName}}</td>
+							<td>{{tabledata.variableName}}</td>
+							<td>{{tabledata.variableName}}</td>
+              <td>{{tabledata.variableName}}</td>
+              <td>{{tabledata.variableName}}</td>
+							</ng-container>
 							<td>
 								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -135,12 +137,14 @@ $(document).ready(function(){
 									<label for="checkbox2"></label>
 								</span>
 							</td>
-              <td> 2 </td>
-							<td>P001</td>
-							<td>2</td>
-							<td>Turboprop Engine</td>
-              <td>2500</td>
-              <td> 1 </td>
+							<ng-container *ngFor="let tabledata of tabledata">
+								<td>{{tabledata.variableName}}</td>
+								<td>{{tabledata.variableName}}</td>
+								<td>{{tabledata.variableName}}</td>
+								<td>{{tabledata.variableName}}</td>
+								  <td>{{tabledata.variableName}}</td>
+								  <td>{{tabledata.variableName}}</td>
+								</ng-container>
 							<td>
 								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -153,12 +157,14 @@ $(document).ready(function(){
 									<label for="checkbox3"></label>
 								</span>
 							</td>
-              <td> 3 </td>
-							<td>P001</td>
-							<td>3</td>
-							<td>Turbbine Engine</td>
-              <td>2000</td>
-              <td> 1 </td>
+							<ng-container *ngFor="let tabledata of tabledata">
+								<td>{{tabledata.variableName}}</td>
+								<td>{{tabledata.variableName}}</td>
+								<td>{{tabledata.variableName}}</td>
+								<td>{{tabledata.variableName}}</td>
+								  <td>{{tabledata.variableName}}</td>
+								  <td>{{tabledata.variableName}}</td>
+								</ng-container>
 							<td>
 								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -171,12 +177,14 @@ $(document).ready(function(){
 									<label for="checkbox4"></label>
 								</span>
 							</td>
-              <td> 19 </td>
-							<td>P002</td>
-							<td>208B-5522</td>
-							<td>2019 Cessna Grand Caravan EX</td>
-              <td>7200000</td>
-              <td> 1 </td>
+							<ng-container *ngFor="let tabledata of tabledata">
+								<td>{{tabledata.variableName}}</td>
+								<td>{{tabledata.variableName}}</td>
+								<td>{{tabledata.variableName}}</td>
+								<td>{{tabledata.variableName}}</td>
+								  <td>{{tabledata.variableName}}</td>
+								  <td>{{tabledata.variableName}}</td>
+								</ng-container>
 							<td>
 								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -189,12 +197,14 @@ $(document).ready(function(){
 									<label for="checkbox5"></label>
 								</span>
 							</td>
-              <td> 20 </td>
-							<td>P002</td>
-							<td>525-0927</td>
-							<td>2016 Citation M2</td>
-              <td>N/A</td>
-              <td> 0 </td>
+							<ng-container *ngFor="let tabledata of tabledata">
+								<td>{{tabledata.variableName}}</td>
+								<td>{{tabledata.variableName}}</td>
+								<td>{{tabledata.variableName}}</td>
+								<td>{{tabledata.variableName}}</td>
+								  <td>{{tabledata.variableName}}</td>
+								  <td>{{tabledata.variableName}}</td>
+								</ng-container>
 							<td>
 								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
