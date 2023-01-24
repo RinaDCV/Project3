@@ -11,7 +11,7 @@ import { HttphandlerService } from '../services/httphandler.service';
 })
 export class Warehouse1Component {
   checked: any;
-  tabledata: any =[ ];
+  tabledata: any =[];
 
 
   constructor(private userService: UserService, private router: Router, private HttpHandlerService: HttphandlerService) {
