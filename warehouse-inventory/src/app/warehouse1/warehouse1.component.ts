@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
+import { HttphandlerService } from '../services/httphandler.service';
+
 
 @Component({
   selector: 'app-warehouse1',
@@ -8,11 +10,27 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./warehouse1.component.css']
 })
 export class Warehouse1Component {
+  checked: any;
+  tabledata: any =[ ];
 
-  constructor(private userService: UserService, private router: Router) {}
-  title = 'warehouse-inventory';
+
+  constructor(private userService: UserService, private router: Router, private HttpHandlerService: HttphandlerService) {
+
+  //subscription to the return of the method
+  this.HttpHandlerService.getAll().subscribe(data => {
+    //console.log(data.body.drinks)  <=  used for troubleshooting the response..change variables
+    this.tabledata = data.body.drinks;//change this value to reflect correct information
+
+  });
+
+  }
+
+
+    title = 'warehouse-inventory';
     email: string = '';
-  password: string = '';
+    password: string = '';
+
+    isMenuVisible = false;
 
   login(): void {
     const users = this.userService.users;
@@ -29,4 +47,9 @@ export class Warehouse1Component {
     this.userService.loginUser(this.userService.users[0]);
     this.router.navigate(['../warehouse1']);
   }
+
+  toggleMenu(){
+    this.isMenuVisible =!this.isMenuVisible;
+  }
+
 }
