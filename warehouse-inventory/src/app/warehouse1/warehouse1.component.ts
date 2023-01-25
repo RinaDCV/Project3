@@ -17,11 +17,11 @@ export class Warehouse1Component {
   constructor(private userService: UserService, private router: Router, private HttpHandlerService: HttphandlerService) {
 
   //subscription to the return of the method
-  this.HttpHandlerService.getAll().subscribe(data => {
-    //console.log(data.body.drinks)  <=  used for troubleshooting the response..change variables
-    this.tabledata = data.body.drinks;//change this value to reflect correct information
+  // this.HttpHandlerService.tabledata.subscribe(any => {
+  //   //console.log(data.body.drinks)  <=  used for troubleshooting the response..change variables
+  //   this.tabledata = data.body.drinks;//change this value to reflect correct information
 
-  });
+  // });
 
   }
 

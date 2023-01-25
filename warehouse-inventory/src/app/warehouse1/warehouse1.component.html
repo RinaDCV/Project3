@@ -88,6 +88,7 @@ $(document).ready(function(){
 							<h2>Inventory </h2>
 						</div>
 						<div class="col-xs-6">
+					<!--Change to buttons add OnClick, point to method-->
 							<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New part/Item</span></a>
 							<a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>
 						</div>
@@ -119,7 +120,7 @@ $(document).ready(function(){
 								</span>
 							</td>
 							<ng-container *ngFor="let tabledata of tabledata">
-							<td>{{tabledata.variableName}}</td>
+							<td>{{tabledata.Warehouse_ID}</td>
 							<td>{{tabledata.variableName}}</td>
 							<td>{{tabledata.variableName}}</td>
 							<td>{{tabledata.variableName}}</td>
@@ -127,6 +128,7 @@ $(document).ready(function(){
               				<td>{{tabledata.variableName}}</td>
 							</ng-container>
 							<td>
+								<!--Change to buttons add OnClick, point to method-->
 								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 							</td>
@@ -178,7 +180,7 @@ $(document).ready(function(){
 									<label for="checkbox4"></label>
 								</span>
 							</td>
-							<ng-container *ngFor="let tabledata of tabledata">
+							<ng-container *ngFor="let data of tabledata">
 								<td>{{tabledata.variableName}}</td>
 								<td>{{tabledata.variableName}}</td>
 								<td>{{tabledata.variableName}}</td>
@@ -198,7 +200,7 @@ $(document).ready(function(){
 									<label for="checkbox5"></label>
 								</span>
 							</td>
-							<ng-container *ngFor="let tabledata of tabledata">
+							<ng-container *ngFor="let data of tabledata">
 								<td>{{tabledata.variableName}}</td>
 								<td>{{tabledata.variableName}}</td>
 								<td>{{tabledata.variableName}}</td>
