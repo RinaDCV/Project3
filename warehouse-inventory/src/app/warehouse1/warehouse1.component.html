@@ -119,14 +119,14 @@ $(document).ready(function(){
 									<label for="checkbox1"></label>
 								</span>
 							</td>
-							<ng-container *ngFor="let tabledata of tabledata">
-							<td>{{tabledata.Warehouse_ID}</td>
-							<td>{{tabledata.variableName}}</td>
-							<td>{{tabledata.variableName}}</td>
-							<td>{{tabledata.variableName}}</td>
-              				<td>{{tabledata.variableName}}</td>
-              				<td>{{tabledata.variableName}}</td>
-							</ng-container>
+							<ng-container *ngFor="let tableitem of tabledata">
+								<td>{{tableitem.item_id}}</td>
+								<td>{{tableitem.item_id}}</td>
+								<td>{{tableitem.item_id}}</td>
+								<td>{{tableitem.item_id}}</td>
+								<td>{{tableitem.item_id}}</td>
+								<td>{{tableitem.item_id}}</td>
+								</ng-container>
 							<td>
 								<!--Change to buttons add OnClick, point to method-->
 								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
@@ -140,13 +140,13 @@ $(document).ready(function(){
 									<label for="checkbox2"></label>
 								</span>
 							</td>
-							<ng-container *ngFor="let tabledata of tabledata">
-								<td>{{tabledata.variableName}}</td>
-								<td>{{tabledata.variableName}}</td>
-								<td>{{tabledata.variableName}}</td>
-								<td>{{tabledata.variableName}}</td>
-								  <td>{{tabledata.variableName}}</td>
-								  <td>{{tabledata.variableName}}</td>
+							<ng-container *ngFor="let tableitem of tabledata">
+								<td>{{tableitem.warehouse_id}}</td>
+								<td>{{tableitem.warehouse_id}}</td>
+								<td>{{tableitem.warehouse_id}}</td>
+								<td>{{tableitem.warehouse_id}}</td>
+								<td>{{tableitem.warehouse_id}}</td>
+								<td>{{tableitem.warehouse_id}}</td>
 								</ng-container>
 							<td>
 								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
@@ -160,13 +160,13 @@ $(document).ready(function(){
 									<label for="checkbox3"></label>
 								</span>
 							</td>
-							<ng-container *ngFor="let tabledata of tabledata">
-								<td>{{tabledata.variableName}}</td>
-								<td>{{tabledata.variableName}}</td>
-								<td>{{tabledata.variableName}}</td>
-								<td>{{tabledata.variableName}}</td>
-								  <td>{{tabledata.variableName}}</td>
-								  <td>{{tabledata.variableName}}</td>
+							<ng-container *ngFor="let tableitem of tabledata">
+								<td>{{tableitem.qty}}</td>
+								<td>{{tableitem.qty}}</td>
+								<td>{{tableitem.qty}}</td>
+								<td>{{tableitem.qty}}</td>
+								<td>{{tableitem.qty}}</td>
+								<td>{{tableitem.qty}}</td>
 								</ng-container>
 							<td>
 								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
@@ -180,13 +180,13 @@ $(document).ready(function(){
 									<label for="checkbox4"></label>
 								</span>
 							</td>
-							<ng-container *ngFor="let data of tabledata">
-								<td>{{tabledata.variableName}}</td>
-								<td>{{tabledata.variableName}}</td>
-								<td>{{tabledata.variableName}}</td>
-								<td>{{tabledata.variableName}}</td>
-								  <td>{{tabledata.variableName}}</td>
-								  <td>{{tabledata.variableName}}</td>
+							<ng-container *ngFor="let tableitem of tabledata">
+								<td>{{tableitem.price}}</td>
+								<td>{{tableitem.price}}</td>
+								<td>{{tableitem.price}}</td>
+								<td>{{tableitem.price}}</td>
+								<td>{{tableitem.price}}</td>
+								<td>{{tableitem.price}}</td>
 								</ng-container>
 							<td>
 								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
@@ -200,13 +200,13 @@ $(document).ready(function(){
 									<label for="checkbox5"></label>
 								</span>
 							</td>
-							<ng-container *ngFor="let data of tabledata">
-								<td>{{tabledata.variableName}}</td>
-								<td>{{tabledata.variableName}}</td>
-								<td>{{tabledata.variableName}}</td>
-								<td>{{tabledata.variableName}}</td>
-								  <td>{{tabledata.variableName}}</td>
-								  <td>{{tabledata.variableName}}</td>
+							<ng-container *ngFor="let tableitem of tabledata">
+								<td>{{tableitem.nomenclature}}</td>
+								<td>{{tableitem.nomenclature}}</td>
+								<td>{{tableitem.nomenclature}}</td>
+								<td>{{tableitem.nomenclature}}</td>
+								<td>{{tableitem.nomenclature}}</td>
+								<td>{{tableitem.nomenclature}}</td>
 								</ng-container>
 							<td>
 								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
