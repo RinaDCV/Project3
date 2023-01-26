@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
 import { HttphandlerService } from '../services/httphandler.service';
+import { Aircraft } from '../model/aircraft.model';
 
 
 @Component({
@@ -17,11 +18,18 @@ export class Warehouse1Component {
   constructor(private userService: UserService, private router: Router, private HttpHandlerService: HttphandlerService) {
 
   //subscription to the return of the method
-  // this.HttpHandlerService.tabledata.subscribe(any => {
+   this.HttpHandlerService.getAll().subscribe(data => {
   //   //console.log(data.body.drinks)  <=  used for troubleshooting the response..change variables
-  //   this.tabledata = data.body.drinks;//change this value to reflect correct information
+   this.tabledata= data;
 
-  // });
+   });
+
+   this.HttpHandlerService.updateTD(this.tabledata).subscribe(data => {
+    //   //console.log(data.body.drinks)  <=  used for troubleshooting the response..change variables
+
+    this.tabledata= data;
+
+     });
 
   }
 
