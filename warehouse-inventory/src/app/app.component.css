@@ -13,8 +13,8 @@ h2 {
 }
 
 .image {
-    height: 100em; 
-    background-size: cover; 
+
+    background-size: cover;
     width: auto;
     background-image: url('../assets/images/LearJet.jpg');
 }

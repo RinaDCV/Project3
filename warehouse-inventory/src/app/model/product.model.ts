@@ -1,10 +1,10 @@
 export interface Product {
 
-    product_id: number;
+    id: number;
     engine_manufacturer: string;
-    in_stock: string;
+    in_stock: number;
     nomenclature: string;
-    price: number;
+    price: string;
     qty: number;
     warehouse_id: string;
 

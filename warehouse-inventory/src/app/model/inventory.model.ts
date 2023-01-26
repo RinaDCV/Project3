@@ -1,12 +1,13 @@
 export interface Inventory {
 
-    inventory_id: number;
+    id: number;
+    //do we delete???????? item_id
+    item_id: number;
     manufacture_name: string;
     nomenclature: string;
     part_id: number;
-    Item_ID: number;
-    price: number;
+    price: string;
     qty: number;
-    warehouse_id: number;
+    warehouse_id: string;
 
     }
