@@ -114,7 +114,6 @@ $(document).ready(function(){
 					<tbody>
             <ng-container *ngFor="let tableitem of inventory">
 
-
 						<tr>
 							<td>
 								<span class="custom-checkbox">
@@ -122,9 +121,6 @@ $(document).ready(function(){
 									<label for="checkbox1"></label>
 								</span>
 							</td>
-
-								<td>{{tableitem.item_id}}</td>
-
 								<td>{{tableitem.warehouse_id}}</td>
 
                 <td>{{tableitem.part_id}}</td>
@@ -133,18 +129,20 @@ $(document).ready(function(){
 
 								<td>{{tableitem.price}}</td>
 
-
                 <td>{{tableitem.qty}}</td>
 
+                <td>{{tableitem.aircraft_id}}</td>
+
+                <td>{{tableitem.product_id}}</td>
 							<td>
 								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" (click)="removeById(tableitem.id)" title="Delete">&#xE872;</i></a>
 							</td>
 						</tr>
           </ng-container>
 					</tbody>
 				</table>
-				<div class="clearfix">
+				<!-- <div class="clearfix">
 					<div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
 					<ul class="pagination">
 						<li class="page-item disabled"><a href="#">Previous</a></li>
@@ -155,7 +153,7 @@ $(document).ready(function(){
 						<li class="page-item"><a href="#" class="page-link">5</a></li>
 						<li class="page-item"><a href="#" class="page-link">Next</a></li>
 					</ul>
-				</div>
+				</div> -->
 			</div>
 		</div>
     </div>
@@ -169,7 +167,7 @@ $(document).ready(function(){
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
 					<div class="modal-body">
-						<div class="form-group">
+						<div class="form-group" [hidden]="true">
 							<label>Inventory_ID</label>
 							<!-- <input type="text" class="form-control" required> -->
                             <input [(ngModel)]="inventory_id" id="inventory_id" name="inventory_id" type="number" placeholder="inventory_id">
@@ -192,23 +190,36 @@ $(document).ready(function(){
                         <div class="form-group">
 							<label>Price</label>
 							<!-- <input type="text" class="form-control" required> -->
-							<input [(ngModel)]="price" id="price" name="nomenclature" type="text" placeholder="price">
+							<input [(ngModel)]="price" id="price" name="price" type="text" placeholder="price">
 						</div>
-                        <div class="form-group">
+              <div class="form-group">
 							<label>Qty O/H</label>
 							<!-- <input type="text" class="form-control" required> -->
 							<input [(ngModel)]="qty" id="qty" name="qty" type="number" placeholder="qty">
 						</div>
+            <div class="form-group">
+							<label>Aircraft ID</label>
+							<!-- <input type="text" class="form-control" required> -->
+							<input [(ngModel)]="aircraft_id" id="aircraft_id" name="aircraft_id" type="number" placeholder="aircraft_id">
+						</div>
+            <div class="form-group">
+							<label>Product ID</label>
+							<!-- <input type="text" class="form-control" required> -->
+							<input [(ngModel)]="product_id" id="product_id" name="product_id" type="number" placeholder="product_id">
+						</div>
+
 					</div>
 					<div class="modal-footer">
 						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-						<input type="submit" class="btn btn-success" (click)="addInventory()" value="Add">
+            <button id="btn" class="btn btn-success" data-dismiss="modal" (click)="addInventory()">add</button>
+
+						<!-- <input type="submit" class="btn btn-success" (click)="addInventory()" value="Add"> -->
 					</div>
 				</form>
 			</div>
 		</div>
 	</div>
-	<!-- Edit Modal HTML -->
+  <!-- Edit Modal HTML -->
 	<div id="editEmployeeModal" class="modal fade">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -266,7 +277,7 @@ $(document).ready(function(){
 					</div>
 					<div class="modal-footer">
 						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-						<input type="submit" class="btn btn-danger" (click)="deleteItem()" value="Delete">
+						<input type="submit" class="btn btn-danger" data-dismiss="modal" (click)="deleteBy()" value="Delete">
 					</div>
 				</form>
 			</div>

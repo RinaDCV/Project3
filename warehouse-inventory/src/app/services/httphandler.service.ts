@@ -5,6 +5,7 @@ import { environment} from 'src/environments/environment';
 import { Aircraft } from '../model/aircraft.model';
 import { Product } from '../model/product.model';
 import { Inventory } from '../model/inventory.model';
+import { Warehouse1Component } from '../warehouse1/warehouse1.component';
 
 @Injectable({
   providedIn: 'root'
@@ -71,21 +72,34 @@ getAll(): void{
 }
 updateTD(inventory:Inventory, id:number){
   this.HttpClient.put<Inventory>(this.url +'inventory/' + id, inventory).subscribe(data => {
-    for(let i=0; i< this.inventory.length; i++)
+    for(let i=0; i< this.inventory.length; i++){
       if (this.inventory[i].id ==id)
       this.inventory[i] =data
+    }
+      this.inventoryDb.next(this.inventory)
     })
 }
-removeTD(): Observable<HttpResponse<Inventory>>{
-  const removeTDUrl = this.url + 'inventory';
-  return this.HttpClient.delete<Inventory>(this.url + 'inventory', {observe: 'response'})
+removeTD(id:number): void{
+  console.log("i here trying to delete");
+  this.HttpClient.delete(this.url +'inventory/' + id).subscribe(data => {
+
+    for(let i=0; i< this.inventory.length; i++){
+      if (this.inventory[i].id ==id)
+
+      this.inventory.splice(i, 1);
+      console.log("still trying");
+    }
+      this.inventoryDb.next(this.inventory)
+    })
 }
-postTD(inventory:any): Observable<HttpResponse<Inventory>>{
-  const putTDUrl = this.url + 'inventory';
-  return this.HttpClient.post<Inventory>(this.url,'inventory', {observe: 'response'})
+postTD(inventory:Inventory){
+  this.HttpClient.post<Inventory>(this.url +'inventory', inventory).subscribe(data => {
+      this.inventory.push(data);
+      this.inventoryDb.next(this.inventory)
+    })
 }
 patchTD(inventory:Inventory): Observable<HttpResponse<Inventory>>{
-  const putTDUrl = this.url + 'inventory';
+  const patchTDUrl = this.url + 'inventory';
   return this.HttpClient.patch<Inventory>(this.url,'inventory', {observe: 'response'})
 }
 

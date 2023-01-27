@@ -2,11 +2,10 @@ export interface Aircraft {
 
     aircraft_id: number;
     aircraft_manufacturer: string;
-    maint_hours: number;
-    item_id: number;
+    maint_hours: string;
     nomenclature: string;
-    price: number;
+    price: string;
     qty: number;
-    warehouse_id: number;
+    warehouse_id: string;
 
 }

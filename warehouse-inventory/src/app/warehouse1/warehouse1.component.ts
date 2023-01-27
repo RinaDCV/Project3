@@ -72,8 +72,13 @@ export class Warehouse1Component implements OnInit{
     warehouse_id: string = "";
     part_id:number = 0;
     nomenclature:string = '';
-    price:number = 0;
+    price:string = '';
     qty:number = 0;
+    aircraft_id:number= 0;
+    product_id:number= 0;
+    manufacturer_name:string='';
+
+    toBeDeleted:number= 0;
 
     inventory:Inventory[]= [];
 
@@ -100,23 +105,31 @@ export class Warehouse1Component implements OnInit{
   }
 
   addInventory(){
-    let addItem= {inventory_id: this.inventory_id,
+    let addItem= {id: this.inventory_id,
       warehouse_id:this.warehouse_id,
       part_id:this.part_id,
       nomenclature:this.nomenclature,
+      manufacturer_name: this.manufacturer_name,
       price:this.price,
-      qty:this.qty }
+      qty:this.qty,
+      aircraft_id:this.aircraft_id,
+      product_id:this.product_id}
     this.HttpHandlerService.postTD(addItem);
+    console.log(addItem);
   }
   saveInventory(){
    // this.HttpHandlerService.patchTD();
   }
-  deleteItem(){
-    this.HttpHandlerService.removeTD();
+
+  deleteBy(){
+    this.HttpHandlerService.removeTD(this.toBeDeleted);
   }
   get(){
 
     this.HttpHandlerService.getAll();
+  }
+  removeById(id:number){
+    this.toBeDeleted= id;
   }
 
 }
