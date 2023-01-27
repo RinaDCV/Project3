@@ -1,0 +1,19 @@
+product_id,engine_manufacturer,in_stock,nomenclature,price,qty,warehouse_id
+1000,Contiental Motors,10,Piston Engine,"$3,000.00 ",1,P001
+1001,Lycoming,20,Turboprop Engine,"$2,500.00 ",1,P001
+1002,Rotax,20,Turbbine Engine,"$2,000.00 ",1,P001
+1003,Pratt&Whitney,15,Turboprop Engine,"$3,100.00 ",1,P001
+1004,Honeywell,20,Turbbine Engine,"$2,500.00 ",1,P001
+1005,Garrett,10,Piston Engine,"$2,400.00 ",1,P001
+1006,EnerSys,20,Battery,$250.00 ,1,P001
+1007,Cessna,30,Alternator,$900.00 ,1,P001
+1008,Honeywell,100,Air Filter,$40.00 ,1,P001
+1009,Aveo,200,Strobe Lamps,$200.00 ,1,P001
+1010,J&P,100,Fuel Caps,$120.00 ,1,P001
+1011,Piper,200,Cargo Tie-Downs,$40.00 ,1,P001
+1012,Michelin,100,Tires,$350.00 ,1,P001
+1013,Tempest,300,Spark Plugs,$130.00 ,1,P001
+1014,RAMI,200,Coaxial Cables,$20.00 ,1,P001
+1015,Tempest,15,Fuel Pump,$800.00 ,1,P001
+1016,Klixon,300,Circuit Breakers,$35.00 ,1,P001
+1017,AN,300,Fittings,$3.00 ,1,P001

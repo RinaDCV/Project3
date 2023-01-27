@@ -1,0 +1,19 @@
+aircraft_id,aircraft_manufacturer,maint_hours,nomenclature,price,qty,warehouse_id
+522,Beech Aircraft,381,2019 Cessna Grand Caravan EX,"$7,200,000.00 ",1,P002
+927,Cessana Aircraft,428,2016 Citation M2, $-   ,0,P002
+32,Piper Aircraft,247,2019 Citation M2, $-   ,0,P002
+79,Cessana Aircraft,491,2021 Citation M2,"$50,000.00 ",1,P002
+196,LearJet,3491,2007 Citation CJ3, $-   ,0,P002
+551,Cessana Aircraft,4127,2018 Citation CJ3+, $-   ,0,P002
+175,Cessana Aircraft,9718,2014 Citation XLS+, $-   ,0,P002
+37,Cessana Aircraft,368,2005 Citation Sovereign, $-   ,0,P002
+934,Beech Aircraft,302,2006 King Air B200,"$1,023,000.00 ",2,P002
+374,Beech Aircraft,353,2020 King Air 250, $-   ,0,P002
+397,Beech Aircraft,3373,2021 King Air 260,"$920,000.00 ",2,P002
+417,Beech Aircraft,720,2022 King Air 260, $-   ,0,P002
+246,Beech Aircraft,52,2021 King Air 360,"$1,266,890.00 ",1,P002
+593,BeechJet,667,2011 TBM 850, $-   ,0,P002
+81,Hawker,337,2019 Piper M600,"$27,251.00 ",1,P002
+950,Beech Aircraft,179,2006 Corvex,"$19,950.00 ",2,P002
+935,Beech Aircraft,214,2007 Corvex C6, $-   ,0,P002
+985,Gulfstream America,943,2008 Corvex XSL,"$15,000.00 ",1,P002
