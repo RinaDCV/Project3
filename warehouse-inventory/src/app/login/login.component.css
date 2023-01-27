@@ -4,11 +4,12 @@ main {
         justify-content: center;
         text-align: center;
         font-style: bold;
-        color: white;
+        color: rgb(8, 8, 8);
         font-size: large;
         margin: 370px;
         margin-left: 35%;
         margin-right: 35%;
+        /* margin-bottom: 5%; */
         padding: 24px;
 
 

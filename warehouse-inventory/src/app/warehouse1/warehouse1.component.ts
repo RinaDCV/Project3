@@ -18,41 +18,6 @@ export class Warehouse1Component implements OnInit{
 
   constructor(private userService: UserService, private router: Router, private HttpHandlerService: HttphandlerService) {
 
-
-  // //subscription to the return of the method
-  //  this.HttpHandlerService.getAll().subscribe(data => {
-  // //   //console.log(data.body.drinks)  <=  used for troubleshooting the response..change variables
-  //  this.tabledata= data;
-
-  //  });
-
-  //  this.HttpHandlerService.updateTD(this.tabledata).subscribe(data => {
-  //   //   //console.log(data.body.drinks)  <=  used for troubleshooting the response..change variables
-  //   this.tabledata= data;
-
-  //    });
-
-  //  this.HttpHandlerService.removeTD().subscribe(data => {
-  //   //   //console.log(data.body.drinks)  <=  used for troubleshooting the response..change variables
-  //   this.tabledata= data;
-
-  //    });
-
-  //  this.HttpHandlerService.postTD(this.tabledata).subscribe(data => {
-  //   //   //console.log(data.body.drinks)  <=  used for troubleshooting the response..change variables
-  //   this.tabledata= data;
-
-  //   });
-  //    this.HttpHandlerService.patchTD(this.tabledata).subscribe(data => {
-  //     //   //console.log(data.body.drinks)  <=  used for troubleshooting the response..change variables
-  //     this.tabledata= data;
-
-  //   });
-  //      this.HttpHandlerService.getById(this.tabledata).subscribe(data => {
-  //       this.tabledata.push(data);
-
-  //   });
-
   }
 
   ngOnInit(): void {
@@ -117,8 +82,18 @@ export class Warehouse1Component implements OnInit{
     this.HttpHandlerService.postTD(addItem);
     console.log(addItem);
   }
-  saveInventory(){
-   // this.HttpHandlerService.patchTD();
+  saveInventory(inventory:any){
+    let saveItem= {id: this.inventory_id,
+      warehouse_id:this.warehouse_id,
+      part_id:this.part_id,
+      nomenclature:this.nomenclature,
+      manufacturer_name: this.manufacturer_name,
+      price:this.price,
+      qty:this.qty,
+      aircraft_id:this.aircraft_id,
+      product_id:this.product_id}
+    this.HttpHandlerService.updateTD(saveItem,inventory);
+    console.log(saveItem);
   }
 
   deleteBy(){

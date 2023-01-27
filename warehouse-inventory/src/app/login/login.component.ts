@@ -23,7 +23,7 @@ managerLogin(): void {
     //this first if statement is if a user passes email and password challenge.
     if (manager.email === this.email && manager.password === this.password)
       this.managerService.loginManager(manager);
-      this.router.navigate(['../manager']);
+      this.router.navigate(['../warehouse1']);
 
       if(manager.email !== this.email || manager.password !== this.password)
       this.router.navigate(['../register']);

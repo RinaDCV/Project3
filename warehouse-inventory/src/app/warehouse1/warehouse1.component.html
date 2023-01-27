@@ -38,14 +38,14 @@
       </ul>
     </div> -->
 
-    <nav class="navbar bg-body-tertiary">
+    <!-- <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <!-- <button class="btn btn-outline-success" (click)="getById()" type="submit">Search</button> -->
+          <button class="btn btn-outline-success" (click)="getById()" type="submit">Search</button>
         </form>
       </div>
-    </nav>
+    </nav> -->
   </div>
 </nav>
 
@@ -102,12 +102,14 @@ $(document).ready(function(){
 									<label for="selectAll"></label>
 								</span>
 							</th>
-							<th>Inventory_ID</th>
+
 							<th>Warehouse_ID</th>
 							<th>Part_ID</th>
 							<th>Nomenclature</th>
 							<th>Price</th>
               <th>Qty O/H</th>
+              <th>Aircraft_ID</th>
+              <th>Product_ID</th>
 						</tr>
 					</thead>
 
@@ -121,6 +123,7 @@ $(document).ready(function(){
 									<label for="checkbox1"></label>
 								</span>
 							</td>
+
 								<td>{{tableitem.warehouse_id}}</td>
 
                 <td>{{tableitem.part_id}}</td>
@@ -229,10 +232,7 @@ $(document).ready(function(){
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
 					<div class="modal-body">
-						<div class="form-group">
-							<label>Inventory_ID</label>
-              <input [(ngModel)]="inventory_id" id="inventory_id" name="inventory_id" type="number" placeholder="inventory_id">
-						</div>
+
 						<div class="form-group">
 							<label>Warehouse_ID</label>
 							<input [(ngModel)]="warehouse_id" id="warehouse_id" name="warehouse_id" type="text" placeholder="warehouse_id">
@@ -253,10 +253,17 @@ $(document).ready(function(){
 							<label>Qty O/H</label>
 							<input [(ngModel)]="qty" id="qty" name="qty" type="number" placeholder="qty">
 						</div>
+            <div class="form-group">
+							<label>Aircraft_ID</label>
+              <input [(ngModel)]="aircraft_id" id="aircraft_id" name="aircraft_id" type="number" placeholder="aircraft_id">
+						</div>	<div class="form-group">
+							<label>Product_ID</label>
+              <input [(ngModel)]="product_id" id="product_id" name="product_id" type="number" placeholder="product_id">
+						</div>
 					</div>
 					<div class="modal-footer">
 						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-						<input type="submit" class="btn btn-success" (click)="saveInventory()" value="save">
+						<input type="submit" class="btn btn-success" data-dismiss="modal" (click)="saveInventory(inventory)" value="save">
 					</div>
 				</form>
 			</div>
